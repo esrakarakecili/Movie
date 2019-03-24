@@ -10,10 +10,3 @@ import Foundation
 
 let apiKey = "f2a0d925"
 let baseUrl = "https://www.omdbapi.com/"
-
-func unwrap(str: String?) -> String {
-    if let myStr = str {
-        return myStr
-    }
-    return ""
-}

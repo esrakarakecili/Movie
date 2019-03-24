@@ -7,6 +7,7 @@ target 'MovieExample' do
 
   # Pods for MovieExample
   pod 'Firebase/Core'
+  pod 'Firebase/RemoteConfig'
   pod 'AFNetworking', '~> 3.0'
 
   target 'MovieExampleTests' do

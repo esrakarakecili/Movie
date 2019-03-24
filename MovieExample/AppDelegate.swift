@@ -8,22 +8,17 @@
 
 import UIKit
 import Firebase
+import SystemConfiguration
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Firebase
         FirebaseApp.configure()
-        
-        // Launch Screen
-        // FIXME: do it 3.0 secs
-        Thread.sleep(forTimeInterval: 0)
+        let _ = RCValues.sharedInstance
         return true
     }
 
