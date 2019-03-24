@@ -29,7 +29,6 @@ class MovieItem: Decodable {
     var imdbRating: String?
     var imdbVotes: String?
     var imdbID: String?
-    var Type: String?
     var DVD: String?
     var BoxOffice: String?
     var Production: String?

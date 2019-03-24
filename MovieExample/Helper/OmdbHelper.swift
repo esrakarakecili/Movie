@@ -11,13 +11,13 @@ import AFNetworking
 
 class OmdbHelper {
     
-    func searchMovie(movie: String) -> String {
+    func searchMovie(movie: String, completion: @escaping ((MovieItem?) -> Void)) {
         let searchUrl = "\(baseUrl)?t=\(movie)&apikey=\(apiKey)"
         print("\(searchUrl)")
         
         let configuration = URLSessionConfiguration.default
         let manager = AFURLSessionManager.init(sessionConfiguration: configuration)
-        guard let url = URL.init(string: searchUrl) else { return "" }
+        guard let url = URL.init(string: searchUrl) else { return; completion(nil) }
         let request = URLRequest.init(url: url)
         let dataTask = manager.dataTask(with: request,
                                         uploadProgress: nil,
@@ -30,10 +30,9 @@ class OmdbHelper {
             let data = try! JSONSerialization.data(withJSONObject: (object as! [String:Any]), options: .prettyPrinted)
             let json = try! JSONDecoder().decode(MovieItem.self, from: data)
             print(json)
+            completion(json)
         }
         
         dataTask.resume()
-        
-        return searchUrl
     }
 }
