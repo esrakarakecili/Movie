@@ -14,16 +14,16 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let omdHelper = OmdbHelper()
-        omdHelper.searchMovie(movie: "spiderman")
+        searchBar.text = "spiderman"
     }
-    
 }
 
 extension MainVC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("\(unwrap(str: searchBar.text))")
+        
+        let omdHelper = OmdbHelper()
+        omdHelper.searchMovie(movie: unwrap(str: searchBar.text))
     }
-    
 }

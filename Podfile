@@ -7,6 +7,7 @@ target 'MovieExample' do
 
   # Pods for MovieExample
   pod 'Firebase/Core'
+  pod 'AFNetworking', '~> 3.0'
 
   target 'MovieExampleTests' do
     inherit! :search_paths

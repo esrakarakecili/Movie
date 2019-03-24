@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6FF7B20329A92F7F8D828F1A /* Pods_MovieExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B505E38923D61F16F0349EE /* Pods_MovieExample.framework */; };
+		C02DACE622478B94002F39B1 /* MovieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02DACE522478B93002F39B1 /* MovieItem.swift */; };
 		C0AADF6B2246D1E300415376 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6A2246D1E300415376 /* MainVC.swift */; };
 		C0AADF6D2246D22A00415376 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6C2246D22A00415376 /* DetailVC.swift */; };
 		C0AADF702246D4A500415376 /* OmdbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6F2246D4A500415376 /* OmdbHelper.swift */; };
@@ -37,6 +38,7 @@
 		5206BC75EC1A8BB17D04619C /* Pods-MovieExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieExample.debug.xcconfig"; path = "Target Support Files/Pods-MovieExample/Pods-MovieExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5B505E38923D61F16F0349EE /* Pods_MovieExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		789CE113AFECA32358ADCCEB /* Pods_MovieExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02DACE522478B93002F39B1 /* MovieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItem.swift; sourceTree = "<group>"; };
 		C0AADF6A2246D1E300415376 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C0AADF6C2246D22A00415376 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		C0AADF6F2246D4A500415376 /* OmdbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmdbHelper.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		C0AADF672246D1A000415376 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C02DACE522478B93002F39B1 /* MovieItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MovieExample/Pods-MovieExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -289,6 +293,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -350,6 +355,7 @@
 			files = (
 				C0AADF722246D65600415376 /* Constants.swift in Sources */,
 				C0AADF6B2246D1E300415376 /* MainVC.swift in Sources */,
+				C02DACE622478B94002F39B1 /* MovieItem.swift in Sources */,
 				C0AADF702246D4A500415376 /* OmdbHelper.swift in Sources */,
 				C0F4CCEC2246B33700DC5AFE /* AppDelegate.swift in Sources */,
 				C0AADF6D2246D22A00415376 /* DetailVC.swift in Sources */,

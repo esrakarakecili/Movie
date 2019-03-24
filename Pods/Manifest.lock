@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - Firebase/Core (5.19.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.8.0)
@@ -51,10 +66,12 @@ PODS:
   - nanopb/encode (0.3.901)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.0)
   - Firebase/Core
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -64,6 +81,7 @@ SPEC REPOS:
     - nanopb
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Firebase: c60d49e9c2630875a96207d15e2affb8364996d1
   FirebaseAnalytics: fd72a26bf8dac84cefba2f0864366f718555a5b0
   FirebaseCore: 22a79a961c3951ef2f77b67bfbc99e454247b319
@@ -72,6 +90,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: 0d41c1832505efe1410e49de7d337dd47d007ac1
+PODFILE CHECKSUM: 46bdf0f4b30ab6b69da5267f02b17f25a10f298b
 
 COCOAPODS: 1.6.1

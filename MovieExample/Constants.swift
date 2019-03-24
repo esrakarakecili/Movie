@@ -9,7 +9,7 @@
 import Foundation
 
 let apiKey = "f2a0d925"
-let baseUrl = "http://www.omdbapi.com/"
+let baseUrl = "https://www.omdbapi.com/"
 
 func unwrap(str: String?) -> String {
     if let myStr = str {
