@@ -44,6 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        // Firebase Push Notification
+        let dictionary = userInfo["message_id"] as! NSDictionary
+        let message = dictionary["alert"]
+        print(message)
+    }
 }
 
