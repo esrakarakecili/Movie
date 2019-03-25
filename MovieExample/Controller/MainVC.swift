@@ -29,9 +29,11 @@ extension MainVC: UISearchBarDelegate {
         Analytics.logEvent("movie_search",
                            parameters: [AnalyticsParameterItemName:unwrap(str: searchBar.text)])
         print("\(unwrap(str: searchBar.text))")
-        activityView.isHidden = false
+//        activityView.isHidden = false
+        loading(show: true)
         OmdbHelper.searchMovie(movie: unwrap(str: searchBar.text)) { (movieItem) in
-            self.activityView.isHidden = true
+//            self.activityView.isHidden = true
+            loading(show: false)
             self.movieItem = movieItem
             self.tableView.reloadData()
         }

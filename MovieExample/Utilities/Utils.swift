@@ -41,3 +41,34 @@ func delay(seconds: Double, completion: @escaping (() -> Void)) {
         completion()
     }
 }
+
+func loading(show: Bool) {
+    if !show {
+        let indicator = UIApplication.topViewController()?.view.viewWithTag(1001)
+        indicator?.removeFromSuperview()
+        return
+    }
+    let myActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+    myActivityIndicator.tag = 1001
+    myActivityIndicator.center = UIApplication.topViewController()!.view.center
+    myActivityIndicator.startAnimating()
+    UIApplication.topViewController()?.view.addSubview(myActivityIndicator)
+    myActivityIndicator.bringSubviewToFront(UIApplication.topViewController()!.view)
+}
+
+extension UIApplication {
+    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
+}
