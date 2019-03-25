@@ -15,13 +15,11 @@ class LaunchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if !isReachable() {
             let alert = UIAlertController(title: "Network Problem", message: "Please make sure you are connected to the internet.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true)
         } else {
-            
             lbBrand.text = RemoteConfig.remoteConfig().configValue(forKey: "launch_text").stringValue
             // FIXME: do it 3.0 secs
             delay(seconds: 3.0) {

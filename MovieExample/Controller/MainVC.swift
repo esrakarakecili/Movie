@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class MainVC: UIViewController {
-    
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -25,8 +25,9 @@ class MainVC: UIViewController {
 extension MainVC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        Analytics.logEvent("movie_search",
+                           parameters: [AnalyticsParameterItemName:unwrap(str: searchBar.text)])
         print("\(unwrap(str: searchBar.text))")
-        
         let omdHelper = OmdbHelper()
         omdHelper.searchMovie(movie: unwrap(str: searchBar.text)) { (movieItem) in
             self.movieItem = movieItem

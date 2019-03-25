@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Analytics.logEvent("detail_page", parameters: nil)
     }
 }

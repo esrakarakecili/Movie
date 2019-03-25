@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import SystemConfiguration
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -48,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebase Push Notification
         let dictionary = userInfo["message_id"] as! NSDictionary
         let message = dictionary["alert"]
-        print(message)
+        print(message.debugDescription)
     }
 }
 
