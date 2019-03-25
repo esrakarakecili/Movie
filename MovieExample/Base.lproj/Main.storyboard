@@ -150,17 +150,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="f85-Im-xLX"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tKe-OT-vTv">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tKe-OT-vTv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AJB-oF-juI"/>
                             <constraint firstItem="NW5-ZZ-rJV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lh8-NG-THE"/>
                             <constraint firstItem="mcA-6P-hkU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Msj-xX-5yV"/>
                             <constraint firstItem="mcA-6P-hkU" firstAttribute="top" secondItem="NW5-ZZ-rJV" secondAttribute="bottom" id="RsD-SC-a8Q"/>
-                            <constraint firstItem="tKe-OT-vTv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U8Z-DQ-6b9"/>
                             <constraint firstItem="mcA-6P-hkU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZpN-T6-VWW"/>
                             <constraint firstItem="mcA-6P-hkU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aXu-gA-MS4"/>
                             <constraint firstItem="NW5-ZZ-rJV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="elS-de-Mvc"/>
@@ -170,7 +165,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search Movie" id="3B1-oo-GkE"/>
                     <connections>
-                        <outlet property="activityView" destination="tKe-OT-vTv" id="F4x-2l-FwC"/>
                         <outlet property="searchBar" destination="NW5-ZZ-rJV" id="8ts-6H-2WX"/>
                         <outlet property="tableView" destination="mcA-6P-hkU" id="3kp-1T-RPI"/>
                         <segue destination="GQ7-km-aXC" kind="show" identifier="MainVC_to_DetailVC" id="oOP-vd-CjC"/>
