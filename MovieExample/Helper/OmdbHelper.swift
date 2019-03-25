@@ -11,7 +11,7 @@ import AFNetworking
 
 class OmdbHelper {
     
-    func searchMovie(movie: String, completion: @escaping ((MovieItem?) -> Void)) {
+    class func searchMovie(movie: String, completion: @escaping ((MovieItem?) -> Void)) {
         let searchUrl = "\(baseUrl)?t=\(movie)&apikey=\(apiKey)"
         print("\(searchUrl)")
         let configuration = URLSessionConfiguration.default

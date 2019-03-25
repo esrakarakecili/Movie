@@ -13,6 +13,7 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     
     var movieItem: MovieItem?
     
@@ -28,8 +29,9 @@ extension MainVC: UISearchBarDelegate {
         Analytics.logEvent("movie_search",
                            parameters: [AnalyticsParameterItemName:unwrap(str: searchBar.text)])
         print("\(unwrap(str: searchBar.text))")
-        let omdHelper = OmdbHelper()
-        omdHelper.searchMovie(movie: unwrap(str: searchBar.text)) { (movieItem) in
+        activityView.isHidden = false
+        OmdbHelper.searchMovie(movie: unwrap(str: searchBar.text)) { (movieItem) in
+            self.activityView.isHidden = true
             self.movieItem = movieItem
             self.tableView.reloadData()
         }
