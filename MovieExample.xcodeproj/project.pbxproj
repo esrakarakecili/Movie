@@ -13,7 +13,6 @@
 		C02DACEB2247DA17002F39B1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02DACEA2247DA17002F39B1 /* Utils.swift */; };
 		C02DACED2247DBFA002F39B1 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02DACEC2247DBFA002F39B1 /* LaunchVC.swift */; };
 		C044732C224BB491004BA713 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044732B224BB491004BA713 /* GradientView.swift */; };
-		C044732E224BE716004BA713 /* DetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044732D224BE716004BA713 /* DetailTableCell.swift */; };
 		C0AADF6B2246D1E300415376 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6A2246D1E300415376 /* MainVC.swift */; };
 		C0AADF6D2246D22A00415376 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6C2246D22A00415376 /* DetailVC.swift */; };
 		C0AADF702246D4A500415376 /* OmdbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6F2246D4A500415376 /* OmdbHelper.swift */; };
@@ -48,7 +47,6 @@
 		C02DACEA2247DA17002F39B1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C02DACEC2247DBFA002F39B1 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		C044732B224BB491004BA713 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		C044732D224BE716004BA713 /* DetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableCell.swift; sourceTree = "<group>"; };
 		C0AADF6A2246D1E300415376 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C0AADF6C2246D22A00415376 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		C0AADF6F2246D4A500415376 /* OmdbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmdbHelper.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 			children = (
 				C02DACE72247B0E5002F39B1 /* MainTableCell.swift */,
 				C044732B224BB491004BA713 /* GradientView.swift */,
-				C044732D224BE716004BA713 /* DetailTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,7 +387,6 @@
 				C0F4CCEC2246B33700DC5AFE /* AppDelegate.swift in Sources */,
 				C0AADF6D2246D22A00415376 /* DetailVC.swift in Sources */,
 				C02DACEB2247DA17002F39B1 /* Utils.swift in Sources */,
-				C044732E224BE716004BA713 /* DetailTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

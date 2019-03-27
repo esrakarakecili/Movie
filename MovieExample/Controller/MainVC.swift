@@ -15,7 +15,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var movieItem: MovieItem?
+//    var movieItem: MovieItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ extension MainVC: UISearchBarDelegate {
         view.endEditing(true)
         OmdbHelper.searchMovie(movie: unwrap(str: searchBar.text)) { (movieItem) in
             loading(show: false)
-            self.movieItem = movieItem
+            MovieItem.shared = movieItem!
             if movieItem?.Title == nil {
                 showAlert(title: "Sorry", message: "Movie not found")
             }
@@ -44,17 +44,17 @@ extension MainVC: UISearchBarDelegate {
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieItem?.Title == nil ? 0 : 1
+        return MovieItem.shared.Title == nil ? 0 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableCell") as! MainTableCell
-        cell.imgPoster?.sd_setImage(with: URL(string: (movieItem?.Poster)!), placeholderImage: UIImage(named: "no_poster.png"), completed: { (image, error, type, url) in })
-        cell.lbTitle.text = movieItem?.Title
-        cell.lbYear.text = movieItem?.Year
-        cell.lbCountry.text = movieItem?.Country
-        cell.lbImdbRate.text = movieItem?.imdbRating
-        cell.lbLanguage.text = movieItem?.Language
+        cell.imgPoster?.sd_setImage(with: URL(string: (MovieItem.shared.Poster)!), placeholderImage: UIImage(named: "no_poster.png"), completed: { (image, error, type, url) in })
+        cell.lbTitle.text = MovieItem.shared.Title
+        cell.lbYear.text = MovieItem.shared.Year
+        cell.lbCountry.text = MovieItem.shared.Country
+        cell.lbImdbRate.text = MovieItem.shared.imdbRating
+        cell.lbLanguage.text = MovieItem.shared.Language
         return cell
     }
     

@@ -34,4 +34,12 @@ class MovieItem: Decodable {
     var Production: String?
     var Website: String?
     var Response: String?
+    
+    static var shared = MovieItem()
+    
+    init() {
+        
+    }
+    
+    
 }
