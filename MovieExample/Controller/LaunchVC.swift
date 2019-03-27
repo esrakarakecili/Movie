@@ -12,6 +12,17 @@ import FirebaseRemoteConfig
 class LaunchVC: UIViewController {
     
     @IBOutlet weak var lbBrand: UILabel!
+    var gradientLayer: CAGradientLayer!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

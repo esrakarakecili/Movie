@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,23 +15,30 @@
         <scene sceneID="Mce-Fv-mqb">
             <objects>
                 <viewController id="Nyg-a9-YEs" customClass="LaunchVC" customModule="MovieExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kem-J6-iJn">
+                    <view key="view" contentMode="scaleToFill" id="kem-J6-iJn" customClass="GradientView" customModule="MovieExample" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fB-13-EaR">
                                 <rect key="frame" x="187.5" y="333.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9fB-13-EaR" firstAttribute="centerY" secondItem="kem-J6-iJn" secondAttribute="centerY" id="EzB-tU-gdp"/>
-                            <constraint firstItem="9fB-13-EaR" firstAttribute="centerX" secondItem="kem-J6-iJn" secondAttribute="centerX" id="z1F-2k-SCY"/>
+                            <constraint firstItem="9fB-13-EaR" firstAttribute="centerX" secondItem="kem-J6-iJn" secondAttribute="centerX" id="7aF-AJ-4YB"/>
+                            <constraint firstItem="9fB-13-EaR" firstAttribute="centerY" secondItem="kem-J6-iJn" secondAttribute="centerY" id="8g9-fW-uFY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ylY-oV-0Cw"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                <color key="value" name="LoodosColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="rEi-Jy-jkn"/>
                     <connections>
@@ -40,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljw-B0-f7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-647" y="27"/>
+            <point key="canvasLocation" x="-647.20000000000005" y="26.53673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J5E-r1-r3P">
@@ -56,7 +64,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mR-Av-20Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1351" y="27"/>
+            <point key="canvasLocation" x="-1369" y="27"/>
         </scene>
         <!--Search Movie-->
         <scene sceneID="tne-QT-ifu">
@@ -88,31 +96,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeJ-ga-3EM">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="18"/>
+                                                    <rect key="frame" x="16" y="0.0" width="635" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.41045638800334094" green="0.84888983849169652" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rso-Px-Uhl">
-                                                    <rect key="frame" x="16" y="26" width="167.5" height="18"/>
+                                                    <rect key="frame" x="16" y="26" width="313.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAC-bn-pJm">
-                                                    <rect key="frame" x="191.5" y="52" width="167.5" height="18"/>
+                                                    <rect key="frame" x="337.5" y="52" width="313.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imdb Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwM-Mw-Add">
-                                                    <rect key="frame" x="16" y="52" width="167.5" height="18"/>
+                                                    <rect key="frame" x="16" y="52" width="313.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="1" green="0.85508669621435451" blue="0.50718616765360647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHS-PE-t7d">
-                                                    <rect key="frame" x="191.5" y="26" width="167.5" height="18"/>
+                                                    <rect key="frame" x="337.5" y="26" width="313.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -550,4 +558,9 @@
             <point key="canvasLocation" x="836" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="LoodosColor">
+            <color red="0.20784313725490197" green="0.63921568627450975" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

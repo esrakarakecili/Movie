@@ -12,6 +12,7 @@
 		C02DACE82247B0E5002F39B1 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02DACE72247B0E5002F39B1 /* TableCell.swift */; };
 		C02DACEB2247DA17002F39B1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02DACEA2247DA17002F39B1 /* Utils.swift */; };
 		C02DACED2247DBFA002F39B1 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02DACEC2247DBFA002F39B1 /* LaunchVC.swift */; };
+		C044732C224BB491004BA713 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044732B224BB491004BA713 /* GradientView.swift */; };
 		C0AADF6B2246D1E300415376 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6A2246D1E300415376 /* MainVC.swift */; };
 		C0AADF6D2246D22A00415376 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6C2246D22A00415376 /* DetailVC.swift */; };
 		C0AADF702246D4A500415376 /* OmdbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADF6F2246D4A500415376 /* OmdbHelper.swift */; };
@@ -45,6 +46,7 @@
 		C02DACE72247B0E5002F39B1 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		C02DACEA2247DA17002F39B1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C02DACEC2247DBFA002F39B1 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
+		C044732B224BB491004BA713 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C0AADF6A2246D1E300415376 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C0AADF6C2246D22A00415376 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		C0AADF6F2246D4A500415376 /* OmdbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmdbHelper.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C02DACE72247B0E5002F39B1 /* TableCell.swift */,
+				C044732B224BB491004BA713 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AADF722246D65600415376 /* Constants.swift in Sources */,
+				C044732C224BB491004BA713 /* GradientView.swift in Sources */,
 				C0AADF6B2246D1E300415376 /* MainVC.swift in Sources */,
 				C02DACE622478B94002F39B1 /* MovieItem.swift in Sources */,
 				C02DACE82247B0E5002F39B1 /* TableCell.swift in Sources */,
