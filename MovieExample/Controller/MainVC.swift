@@ -47,7 +47,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell") as! TableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableCell") as! MainTableCell
         cell.lbTitle.text = movieItem?.Title
         cell.lbYear.text = movieItem?.Year
         cell.lbCountry.text = movieItem?.Country

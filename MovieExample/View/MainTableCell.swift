@@ -8,8 +8,9 @@
 
 import UIKit
 
-class TableCell: UITableViewCell {
+class MainTableCell: UITableViewCell {
     
+    @IBOutlet weak var imgPoster: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbYear: UILabel!
     @IBOutlet weak var lbCountry: UILabel!
