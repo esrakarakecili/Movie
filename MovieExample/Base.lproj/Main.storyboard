@@ -382,9 +382,8 @@
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmD-bs-CGG">
-                                                                                <rect key="frame" x="57" y="0.0" width="1227.3333333333333" height="18"/>
-                                                                                <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmD-bs-CGG">
+                                                                                <rect key="frame" x="57" y="0.0" width="37.333333333333343" height="18"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -397,7 +396,7 @@
                                                                             <constraint firstAttribute="bottom" secondItem="CmD-bs-CGG" secondAttribute="bottom" constant="12" id="egi-f4-kzL"/>
                                                                             <constraint firstItem="FEv-dZ-BIM" firstAttribute="top" secondItem="XAo-Ow-i5w" secondAttribute="top" id="uen-iP-oIc"/>
                                                                             <constraint firstItem="FEv-dZ-BIM" firstAttribute="leading" secondItem="XAo-Ow-i5w" secondAttribute="leading" id="uhZ-jh-fCE"/>
-                                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="30" id="zdg-QT-0hc"/>
+                                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="zdg-QT-0hc"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-lh-ORy" userLabel="ActorView">
