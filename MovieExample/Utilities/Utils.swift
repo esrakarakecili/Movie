@@ -56,6 +56,12 @@ func loading(show: Bool) {
     myActivityIndicator.bringSubviewToFront(UIApplication.topViewController()!.view)
 }
 
+func showAlert(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    UIApplication.topViewController()?.present(alert, animated: true)
+}
+
 extension UIApplication {
     class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let navigationController = controller as? UINavigationController {

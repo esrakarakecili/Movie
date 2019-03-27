@@ -18,7 +18,6 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.text = "spiderman"
     }
 }
 
@@ -29,9 +28,13 @@ extension MainVC: UISearchBarDelegate {
                            parameters: [AnalyticsParameterItemName:unwrap(str: searchBar.text)])
         print("\(unwrap(str: searchBar.text))")
         loading(show: true)
+        view.endEditing(true)
         OmdbHelper.searchMovie(movie: unwrap(str: searchBar.text)) { (movieItem) in
             loading(show: false)
             self.movieItem = movieItem
+            if movieItem?.Title == nil {
+                showAlert(title: "Sorry", message: "Movie not found")
+            }
             self.tableView.reloadData()
         }
     }
@@ -40,7 +43,7 @@ extension MainVC: UISearchBarDelegate {
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieItem == nil ? 0 : 1
+        return movieItem?.Title == nil ? 0 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,5 +58,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        view.endEditing(true)
+        self.performSegue(withIdentifier: "MainVC_to_DetailVC", sender: nil)
     }
 }
