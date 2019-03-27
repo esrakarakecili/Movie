@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAnalytics
+import SDWebImage
 
 class MainVC: UIViewController {
     
@@ -48,6 +49,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableCell") as! MainTableCell
+        cell.imgPoster?.sd_setImage(with: URL(string: (movieItem?.Poster)!), placeholderImage: UIImage(named: "no_poster.png"), completed: { (image, error, type, url) in })
         cell.lbTitle.text = movieItem?.Title
         cell.lbYear.text = movieItem?.Year
         cell.lbCountry.text = movieItem?.Country

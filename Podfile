@@ -10,6 +10,7 @@ target 'MovieExample' do
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Messaging'
   pod 'AFNetworking', '~> 3.0'
+  pod 'SDWebImage'
 
   target 'MovieExampleTests' do
     inherit! :search_paths
