@@ -78,3 +78,32 @@ extension UIApplication {
         return controller
     }
 }
+
+func loadingAnim(show: Bool) {
+    if !show {
+        delay(seconds: 1.0) {
+            let img = UIApplication.topViewController()?.view.viewWithTag(1002)
+            img?.removeFromSuperview()
+        }
+        return
+    }
+    let img = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0))
+    img.image = UIImage(named: "movie_circle")
+    img.tag = 1002
+    img.center = UIApplication.topViewController()!.view.center
+    rotateView(view: img, duration: 5.0)
+    UIApplication.topViewController()?.view.addSubview(img)
+    img.bringSubviewToFront(UIApplication.topViewController()!.view)
+}
+
+func rotateView(view: UIView, duration: Double = 1) {
+    let kRotationAnimationKey = "rotationanimationkey"
+    if view.layer.animation(forKey: kRotationAnimationKey) == nil {
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotationAnimation.fromValue = 0.0
+        rotationAnimation.toValue = Float(Float.pi * 2.0)
+        rotationAnimation.duration = duration
+        rotationAnimation.repeatCount = Float.infinity
+        view.layer.add(rotationAnimation, forKey: kRotationAnimationKey)
+    }
+}

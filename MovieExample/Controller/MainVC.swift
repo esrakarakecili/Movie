@@ -28,10 +28,12 @@ extension MainVC: UISearchBarDelegate {
         Analytics.logEvent("movie_search",
                            parameters: [AnalyticsParameterItemName:unwrap(str: searchBar.text)])
         print("\(unwrap(str: searchBar.text))")
-        loading(show: true)
+//        loading(show: true)
+        loadingAnim(show: true)
         view.endEditing(true)
         OmdbHelper.searchMovie(movie: unwrap(str: searchBar.text)) { (movieItem) in
-            loading(show: false)
+//            loading(show: false)
+            loadingAnim(show: false)
             MovieItem.shared = movieItem!
             if movieItem?.Title == nil {
                 showAlert(title: "Sorry", message: "Movie not found")
