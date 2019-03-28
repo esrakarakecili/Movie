@@ -42,19 +42,19 @@ func delay(seconds: Double, completion: @escaping (() -> Void)) {
     }
 }
 
-func loading(show: Bool) {
-    if !show {
-        let indicator = UIApplication.topViewController()?.view.viewWithTag(1001)
-        indicator?.removeFromSuperview()
-        return
-    }
-    let myActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
-    myActivityIndicator.tag = 1001
-    myActivityIndicator.center = UIApplication.topViewController()!.view.center
-    myActivityIndicator.startAnimating()
-    UIApplication.topViewController()?.view.addSubview(myActivityIndicator)
-    myActivityIndicator.bringSubviewToFront(UIApplication.topViewController()!.view)
-}
+//func loading(show: Bool) {
+//    if !show {
+//        let indicator = UIApplication.topViewController()?.view.viewWithTag(1001)
+//        indicator?.removeFromSuperview()
+//        return
+//    }
+//    let myActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+//    myActivityIndicator.tag = 1001
+//    myActivityIndicator.center = UIApplication.topViewController()!.view.center
+//    myActivityIndicator.startAnimating()
+//    UIApplication.topViewController()?.view.addSubview(myActivityIndicator)
+//    myActivityIndicator.bringSubviewToFront(UIApplication.topViewController()!.view)
+//}
 
 func showAlert(title: String, message: String) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -81,13 +81,14 @@ extension UIApplication {
 
 func loadingAnim(show: Bool) {
     if !show {
-        delay(seconds: 1.0) {
-            let img = UIApplication.topViewController()?.view.viewWithTag(1002)
+        let img = UIApplication.topViewController()?.view.viewWithTag(1002)
+        delay(seconds: 0.5) {
             img?.removeFromSuperview()
         }
         return
     }
-    let img = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0))
+    
+    let img = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 60.0, height: 60.0))
     img.image = UIImage(named: "movie_circle")
     img.tag = 1002
     img.center = UIApplication.topViewController()!.view.center
@@ -101,7 +102,7 @@ func rotateView(view: UIView, duration: Double = 1) {
     if view.layer.animation(forKey: kRotationAnimationKey) == nil {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.fromValue = 0.0
-        rotationAnimation.toValue = Float(Float.pi * 2.0)
+        rotationAnimation.toValue = Float(Float.pi * 8.0)
         rotationAnimation.duration = duration
         rotationAnimation.repeatCount = Float.infinity
         view.layer.add(rotationAnimation, forKey: kRotationAnimationKey)
