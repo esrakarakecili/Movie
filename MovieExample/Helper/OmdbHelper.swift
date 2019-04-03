@@ -12,7 +12,8 @@ import AFNetworking
 class OmdbHelper {
     
     class func searchMovie(movie: String, completion: @escaping ((MovieItem?) -> Void)) {
-        let searchUrl = "\(baseUrl)?t=\(movie)&apikey=\(apiKey)"
+        let movieEncoded = movie.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let searchUrl = "\(baseUrl)?t=\(movieEncoded!)&apikey=\(apiKey)"
         print("\(searchUrl)")
         let configuration = URLSessionConfiguration.default
         let manager = AFURLSessionManager.init(sessionConfiguration: configuration)
