@@ -5,7 +5,6 @@ Frameworks used;
 
 - Omdb API
 - AFNetworking
-- SDWebImage
 - Firebase Push Notification
 
 Design Patterns;

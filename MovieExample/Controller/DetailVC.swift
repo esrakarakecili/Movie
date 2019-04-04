@@ -46,7 +46,7 @@ class DetailVC: UIViewController {
     }
     
     func setupLabels() {
-        imgPoster.sd_setImage(with: URL(string: MovieItem.shared.Poster!)) { (image, error, type, url) in }
+        imgPoster.setImageWith(URL(string: MovieItem.shared.Poster!)!)
         lbTitle.text = MovieItem.shared.Title
         lbYear.text = "(\(unwrap(str: MovieItem.shared.Year)))"
         lbGenre.text = MovieItem.shared.Genre
